@@ -50,7 +50,7 @@ export class HomeComponent {
     } else if (description.includes('wind')) {
       this.backgroundImage = 'url(../../assets/images/windy.jpg)';
     } else {
-      this.backgroundImage = 'url(../../assets/images/default.png)'; // Default background
+      this.backgroundImage = 'url(../../assets/images/default.png)';
     }
   }
 }
