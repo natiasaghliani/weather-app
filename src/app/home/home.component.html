@@ -3,7 +3,7 @@
         <div class="left-side">
             <div class="logo">
                 <a href="#">W°APP</a>
-            </div> 
+            </div>
             @if(weatherData) {
             <div class="main">
                 <p class="cel">{{ weatherData.main.temp | number:'1.0-0' }}°</p>
@@ -13,7 +13,7 @@
                         <p>{{ weatherData.localDate | date: 'HH:mm' }}</p>
                         <p>- {{ weatherData.localDate | date: 'EEEE, d MMM y' }}</p>
                     </div>
-                </div> 
+                </div>
                 <img src="../../assets/images/Cloudycloud.png" alt="cloud">
             </div>}
         </div>
