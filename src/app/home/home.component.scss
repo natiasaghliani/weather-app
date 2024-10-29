@@ -1,0 +1,172 @@
+.background-container {
+  // background-image: url("/assets/images/bg-weatherlondon.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+
+  .container {
+    max-width: 1600px;
+    width: 100%;
+    // margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    .left-side {
+      width: 70%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .logo {
+        padding: 30px;
+
+        a {
+          color: white;
+          text-decoration: none;
+          font-size: 35px;
+        }
+      }
+
+      .main {
+        padding: 30px;
+        display: flex;
+        gap: 25px;
+        align-items: last baseline;
+
+        .cel {
+          color: white;
+          font-size: 150px;
+        }
+
+        .location {
+          display: flex;
+          flex-direction: column;
+          color: white;
+
+          h2 {
+            font-size: 70px;
+          }
+
+          .date {
+            display: flex;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    .right-side {
+      width: 30%;
+      height: 100vh;
+      backdrop-filter: blur(10px);
+      padding-left: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+
+      .search {
+        padding: 30px 10px 10px 0px;
+
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        border-bottom: 2px solid white;
+        max-width: 300px;
+        width: 100%;
+        input {
+          background-color: transparent;
+          outline: none;
+          color: white;
+          border-style: none;
+          max-width: 200px;
+          width: 100%;
+          font-size: 20px;
+          padding: 5px 0;
+          font-family: "Roboto", system-ui;
+          font-weight: 300;
+          font-style: normal;
+        }
+
+        input[type="text"]::placeholder {
+          color: rgba(255, 255, 255, 0.682);
+          font-size: 18px;
+          font-family: "Roboto", system-ui;
+          font-weight: 300;
+          font-style: normal;
+        }
+
+        button {
+          background-color: transparent;
+          border-style: none;
+          img {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+          }
+        }
+      }
+      h3 {
+        color: white;
+        font-size: 20px;
+        font-family: "Roboto", system-ui;
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      .details-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 350px;
+        width: 100%;
+
+        border-bottom: 2px solid white;
+        padding-bottom: 40px;
+        h2 {
+          color: white;
+          font-size: 18px;
+          font-family: "Roboto", system-ui;
+          font-weight: 300;
+          font-style: normal;
+        }
+
+        .details {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          .p-detail {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+              color: rgba(255, 255, 255, 0.689);
+              font-size: 16px;
+              font-family: "Roboto", system-ui;
+              font-weight: 300;
+              font-style: normal;
+            }
+
+            .value {
+              display: flex;
+              align-items: center;
+              gap: 20px;
+            }
+          }
+        }
+      }
+
+      h4 {
+        font-size: 18px;
+        font-family: "Roboto", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        color: white;
+      }
+    }
+  }
+}

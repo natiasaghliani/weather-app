@@ -1,0 +1,81 @@
+<div class="background-container" [ngStyle]="{'background-image': backgroundImage}">
+    <div class="container">
+        <div class="left-side">
+            <div class="logo">
+                <a href="#">W°APP</a>
+            </div> 
+            @if(weatherData) {
+            <div class="main">
+                <p class="cel">{{ weatherData.main.temp | number:'1.0-0' }}°</p>
+                <div class="location">
+                    <h2>{{ weatherData.name }}</h2>
+                    <div class="date">
+                        <p>{{ weatherData.localDate | date: 'HH:mm' }}</p>
+                        <p>- {{ weatherData.localDate | date: 'EEEE, d MMM y' }}</p>
+                    </div>
+                </div> 
+                <img src="../../assets/images/Cloudycloud.png" alt="cloud">
+            </div>}
+        </div>
+        <div class="right-side">
+            <div class="search">
+                <input type="text" (keyup.enter)="getWeather()" placeholder="Search Location..." [(ngModel)]="city">
+                <button type="submit" (click)="getWeather()">
+                    <img src="../../assets/images/fa_search.png" alt="">
+                </button>
+            </div>
+            <h3>Weather Details...</h3>
+            @if(weatherData){
+            <div class="details-container">
+                <h2>{{ weatherData.weather[0].description | uppercase }}</h2>
+                <div class="details">
+                    <div class="p-detail">
+                        <p>Temp max</p>
+                        <div class="value">
+                            <p>{{ weatherData.main.temp_max | number:'1.0-0' }}°</p>
+                            <img src="../../assets/images/Vector.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="p-detail">
+                        <p>Temp min</p>
+                        <div class="value">
+                            <p>{{ weatherData.main.temp_min | number:'1.0-0'}}°</p>
+                            <img src="../../assets/images/Vector (1).png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="p-detail">
+                        <p>Humadity</p>
+                        <div class="value">
+                            <p>{{ weatherData.main.humidity }}%</p>
+                            <img src="../../assets/images/outline.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="p-detail">
+                        <p>Cloudy</p>
+                        <div class="value">
+                            <p>{{ weatherData.clouds.all }}%</p>
+                            <img src="../../assets/images/outline (1).png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="p-detail">
+                        <p>Wind</p>
+                        <div class="value">
+                            <p>{{ weatherData.wind.speed }} km/h</p>
+                            <img src="../../assets/images/outline (2).png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>}
+            <!-- <h4>7 Day Forecast...</h4> -->
+
+        </div>
+    </div>
+</div>
